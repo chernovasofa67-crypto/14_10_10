@@ -1,18 +1,52 @@
 #include <iostream>
+#include <clocale>
+#include "FoodProduct.h"
+#include "RadioGood.h"
+#include "ProductItem.h"
+#include "Transistor.h"
+#include "DairyProduct.h"
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+int mait() {
+  std::setlocale(LC_ALL, "Uk_UA.UTF-8") ;
 
-int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
+  std::cout<<"Демонстрація ієрархії окремих класів\n\n";
 
-    const auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+  //1
+  std::cout << "[Базовий Товар]\n";
+  ProductItem baseItem("Універсальна коробка");
+  baseItem.showInfo();
+  std::cout << "-------------------------------\n";
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
-    }
+  //2
+  std::cout << "[Радіотовари]\n";
+  RadioGood radio("Антена підсилювальна", "Прийом сигналу");
+  radio.showInfo();
+  std::cout << "-----------------------------\n";
 
-    return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
-}
+  //3
+  std::cout << "[Транзистор]\n";
+  Transistor trans("Біполярний елемент", "Посилення струму", "n-p-n", "BC547");
+  trans.showInfo();
+  std::cout << "------------------------\n";
+
+  //4
+
+  std::cout << "[Харчовий продукт]\n";
+  FoodProduct bread("Хліб Житній", "Бакалія");
+  bread.showInfo();
+  std::cout << "---------------------------\n";
+
+  //5
+
+  std::cout << "[Молочний продукт]\n";
+  DairyProduct milk("Молоко домашнє", "Молочний відділ", "Пастеризоване", "14.10.2026");
+  milk.showInfo();
+  std::cout << "------------------\n";
+
+  std::cout << "[Тестування аксесорів для молока]\n";
+  std::cout << "Стара назва: " << milk.getName() << "\n";
+  milk.setName("Молоко Особливе 3.2%");
+  std::cout << "Оновлена назва через геттер: " << milk.getName() << "\n";
+
+return 0;
+};

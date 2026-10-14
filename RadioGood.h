@@ -6,11 +6,11 @@
 #define INC_14_10_10_RADIIOGOOD_H
 
 #include "ProductItem.h"
-class RadiioGood  : public ProductItem{
+class RadioGood  : public ProductItem{
 protected:
     std::string purpose;
 public:
-    RadiioGood(const std::string& n, const std::string& p);
+    RadioGood(const std::string& n, const std::string& p);
     std::string getPurpose() const;
     void setPurpose(const std::string& p);
     void showInfo() const override;

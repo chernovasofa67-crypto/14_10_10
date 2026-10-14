@@ -7,7 +7,7 @@
 
 Transistor::Transistor(const std::string &n, const std::string &p, const std::string &t, const std::string &num)
 
-    :RadiioGood(n ,p), type(t), number(num){}
+    :RadioGood(n ,p), type(t), number(num){}
 
 std::string Transistor::getType() const {
     return type;
@@ -26,6 +26,6 @@ void Transistor::setNumber(const std::string &num) {
 }
 
 void Transistor::showInfo() const {
-    RadiioGood::showInfo();
+    RadioGood::showInfo();
     std::cout<<"Тип (параметер):"<<type<<",Номер:"<<number<<"\n";
 }

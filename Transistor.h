@@ -5,7 +5,7 @@
 #ifndef INC_14_10_10_TRANSISTOR_H
 #define INC_14_10_10_TRANSISTOR_H
 
-#include "RadiioGood.h"
+#include "RadioGood.h"
 class Transistor :public RadiioGood{
 private:
     std::string type;
