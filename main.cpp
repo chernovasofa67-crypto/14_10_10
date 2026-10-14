@@ -7,7 +7,7 @@
 #include "DairyProduct.h"
 
 
-int maid() {
+int main() {
   std::setlocale(LC_ALL, "Uk_UA.UTF-8") ;
 
   std::cout<<"Демонстрація ієрархії окремих класів\n\n";
