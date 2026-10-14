@@ -11,4 +11,6 @@ add_executable(14_10_10 main.cpp
         Transistor.cpp
         Transistor.h
         FoodProduct.cpp
-        FoodProduct.h)
+        FoodProduct.h
+        DairyProduct.cpp
+        DairyProduct.h)
