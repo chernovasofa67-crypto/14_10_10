@@ -6,6 +6,7 @@
 #include "Transistor.h"
 #include "DairyProduct.h"
 
+
 int mait() {
   std::setlocale(LC_ALL, "Uk_UA.UTF-8") ;
 
