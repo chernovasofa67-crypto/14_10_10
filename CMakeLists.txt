@@ -9,4 +9,6 @@ add_executable(14_10_10 main.cpp
         RadiioGood.cpp
         RadiioGood.h
         Transistor.cpp
-        Transistor.h)
+        Transistor.h
+        FoodProduct.cpp
+        FoodProduct.h)
